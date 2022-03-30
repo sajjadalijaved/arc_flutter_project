@@ -22,3 +22,28 @@ class Myclip extends CustomClipper<Path> {
     return true;
   }
 }
+
+class Myclip1 extends CustomClipper<Path> {
+  @override
+  Path getClip(Size size) {
+    Path path = Path();
+    path.moveTo(0, size.height / 2);
+    // path.lineTo(0, size.height);
+    path.quadraticBezierTo(
+        size.width / 2 - 140, 0, size.width * .3, size.height / 2);
+    path.quadraticBezierTo(
+        size.width / 2 - 10, 0, size.width * .6, size.height / 2);
+    path.quadraticBezierTo(
+        size.width / 2 + 90, 0, size.width * .9, size.height / 2);
+    // path.lineTo(size.width, size.height);
+    // path.lineTo(0, size.height);
+    // // path.lineTo(0, 0);
+    path.close();
+    return path;
+  }
+
+  @override
+  bool shouldReclip(covariant CustomClipper<Path> oldClipper) {
+    return true;
+  }
+}

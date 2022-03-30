@@ -38,11 +38,11 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: ClipPath(
-          clipper: Myclip(),
+          clipper: Myclip1(),
           child: Container(
             height: 400,
             width: 400,
-            color: Colors.green,
+            color: Colors.blue,
           ),
         ),
       ),
